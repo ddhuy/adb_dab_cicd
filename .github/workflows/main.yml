@@ -3,8 +3,9 @@ name: Demo Workflow
 on:
   push:
     branches:
-      - 'main'
-      - 'feature/**'
+      - "main"
+      - "master"
+      - "feature/**"
   
 jobs:
   demo-job:
