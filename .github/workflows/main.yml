@@ -2,9 +2,10 @@ name: Demo Workflow
 
 on:
   push:
-    - 'main'
-    - 'feature/**'
-
+    branches:
+      - 'main'
+      - 'feature/**'
+  
 jobs:
   demo-job:
     name: Demo Job
