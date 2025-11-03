@@ -39,8 +39,10 @@ targets:
       # We explicitly deploy to the current user to make sure we only have a single copy.
       root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
     permissions:
-      - user_name: ddh.huy@outlook.com
+      - service_principal_name: aafc072e-eef6-4fc4-8edf-7452ea4f380b
         level: CAN_MANAGE
+    run_as:
+      service_principal_name: aafc072e-eef6-4fc4-8edf-7452ea4f380b
     presets:
       name_prefix: "[testing] "
 
@@ -53,5 +55,7 @@ targets:
       # We explicitly deploy to the current user to make sure we only have a single copy.
       root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
     permissions:
-      - user_name: ddh.huy@outlook.com
+      - service_principal_name: bd419634-6565-44e7-a4d4-d20dabe8a7ec
         level: CAN_MANAGE
+    run_as:
+      service_principal_name: bd419634-6565-44e7-a4d4-d20dabe8a7ec
