@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="adb_dab_cicd",
-    version="0.0.2",
+    version="0.0.3",
     description="This contains the code in the src directory of the project.",
     author="Huy Dang",
     packages=find_packages(where="./src/"),

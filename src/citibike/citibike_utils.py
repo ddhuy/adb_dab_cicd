@@ -1,5 +1,6 @@
 from pyspark.sql.functions import unix_timestamp, col
 
+
 def get_trip_duration_mins(spark, df, start_col, end_col, output_col):
     """
     Adds a column to the DataFrame calculating the difference in minutes between two timestamp columns.
