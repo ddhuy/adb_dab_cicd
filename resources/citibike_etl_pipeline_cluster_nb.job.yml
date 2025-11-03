@@ -7,7 +7,8 @@ resources:
           python_wheel_task:
             package_name: adb_dab_cicd
             entry_point: main
-          existing_cluster_id: "${var.all_purpose_cluster_id}"
+          # existing_cluster_id: "${var.all_purpose_cluster_id}"
+          job_cluster_key: standard_d4pds_v6
           libraries:
             - whl: "../dist/*.whl"
 
@@ -19,7 +20,8 @@ resources:
             source: WORKSPACE
             base_parameters:
               task_id: "{{task.run_id}}"
-          existing_cluster_id: "${var.all_purpose_cluster_id}"
+          # existing_cluster_id: "${var.all_purpose_cluster_id}"
+          job_cluster_key: standard_d4pds_v6
         
         - task_key: 02_silver_citibike
           depends_on:
@@ -29,8 +31,8 @@ resources:
             base_parameters:
               task_id: "{{task.run_id}}"
             source: WORKSPACE
-          existing_cluster_id: "${var.all_purpose_cluster_id}"
-          # job_cluster_key: standard_d4pds_v6
+          # existing_cluster_id: "${var.all_purpose_cluster_id}"
+          job_cluster_key: standard_d4pds_v6
         
         - task_key: 03_gold_citibike_daily_ride_summary
           depends_on:
@@ -40,8 +42,8 @@ resources:
             base_parameters:
               task_id: "{{task.run_id}}"
             source: WORKSPACE
-          existing_cluster_id: "${var.all_purpose_cluster_id}"
-          #job_cluster_key: standard_d4pds_v6
+          # existing_cluster_id: "${var.all_purpose_cluster_id}"
+          job_cluster_key: standard_d4pds_v6
         
         - task_key: 03_gold_citibike_daily_station_performance
           depends_on:
@@ -51,8 +53,8 @@ resources:
             base_parameters:
               task_id: "{{task.run_id}}"
             source: WORKSPACE
-          existing_cluster_id: "${var.all_purpose_cluster_id}"
-          #job_cluster_key: standard_d4pds_v6
+          # existing_cluster_id: "${var.all_purpose_cluster_id}"
+          job_cluster_key: standard_d4pds_v6
       
       queue:
         enabled: true
